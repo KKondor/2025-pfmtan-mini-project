@@ -22,7 +22,9 @@ A viccportál célja, hogy a felhasználók gyorsan és egyszerűen juthassanak 
 
 ...
 ### 6. Követelménylista
-
+- Reszponzív dizájn: mobilon, tableten és PC-n is jól használható legyen
+- Egyszerű és letisztult UI: könnyen átlátható gombok, navigáció
+- Reklámmentes felület: a felhasználói élményt ne zavarják hirdetések.
 ...
 ### 7. Fogalomszótár
 
