@@ -1,6 +1,6 @@
 # Szimpla Viccportál követelményspecifikáció
 ### 1. Jelenlegi helyzet
-
+A viccek online elérésére számos lehetőség kínálkozik, azonban ezek sokszor nem nyújtanak megfelelő felhasználói élményt. Sok oldal túlzsúfolt reklámokkal, amelyek elvonják a figyelmet és zavaróvá teszik a használatot. Emellett a navigáció gyakran nehézkes, a viccek közötti eligazodás időigényes és körülményes. Mindezek indokolják egy olyan alkalmazás létrehozását, amely egyszerű, letisztult és reklámmentes környezetben biztosít gyors hozzáférést a szórakoztató tartalmakhoz, megkönnyítve ezzel a felhasználók számára a tartalmak fogyasztását.
 ...
 ### 2. Vágyalom rendszer
 
