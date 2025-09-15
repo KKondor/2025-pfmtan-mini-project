@@ -19,7 +19,7 @@ A viccportál célja, hogy a felhasználók gyorsan és egyszerűen juthassanak 
    1. A vicceket a https://github.com/15Dkatz/official_joke_api api-ból hívjuk elő.
 ...
 ### 5. Rendszerre vonatkozó szabályok
-
+A webfelület szabványos eszközökkel történnyen: html\css\javascript.
 ...
 ### 6. Követelménylista
 - Reszponzív dizájn: mobilon, tableten és PC-n is jól használható legyen
