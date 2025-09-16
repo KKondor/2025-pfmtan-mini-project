@@ -19,14 +19,16 @@
         </section>
 
         <main class="joke-content">
+            <!--Ide fognak kerülni a viccek amikor meghívjuk őket backendről-->
             <div class="text-block">
-                <p class="joke-setup" id="setup">What did Michael Jackson name his denim store?</p>
+                <p class="joke-setup" id="setup"></p>
             </div>
             <div class="text-block">
-                <p class="joke-punchline" id="punchline">Billy Jeans!</p>
+                <p class="joke-punchline" id="punchline"></p>
+                <!--Ezeket majd javascriptben be kelessz kapcsolni amikor kap az oldal egy viccet-->
                 <div class="buttons">
-                    <button class="like-btn" data-id="1">&#x1F44D;</button>
-                    <button class="dislike-btn" data-id="1">&#x1F44E;</button>
+                    <button class="like-btn" data-id="1" disabled>&#x1F44D;</button>
+                    <button class="dislike-btn" data-id="1" disabled>&#x1F44E;</button>
                 </div>
             </div>
         </main>
