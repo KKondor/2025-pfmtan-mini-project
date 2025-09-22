@@ -2,17 +2,16 @@
 
 ## A rendszer célja
 
+Egy egyszerű weboldal létrehozása, ami egy gomb megnyomására kér egy viccet a backend adatbázístóé és megjeleníti a képernyőn. Továbbá ezt a viccet a felhasználó értékelheti és egy leader board oldalon megtekintheti a viccek értékelését.
+
 ---
 
 ## Projekt terv
 
 ### Projektszerepkörök, felelősségek
-
+Frontend interface fejlesztő, Frontend Javascript fejlesztő, Backend python+flask fejlesztő, Backend adatbázis fejlesztő
 ### Projektmunkások és felelősségeik
-
-### Ütemterv
-
-### Mérföldkövek
+Kondor Kristóf-Frontend interface fejlesztő, Sebestyén Bence-Backend python+flask fejlesztő, Kacsó Melinda-Backend adatbázis fejlesztő, Nyiri László-Frontend Javascript
 
 ---
 
