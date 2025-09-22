@@ -54,6 +54,8 @@ A felhasználó először a main-page csatlakozik, ahol talál egy generálás g
 
 ### Vásárolt softwarekomponensek és külső rendszerek
 
+A projektben nincs szükség külső szoftverkomponensek vagy szolgáltatások vásárlására.
+
 ### Hardver és hálózati topológia
 
 ### Fizikai alrendszerek
