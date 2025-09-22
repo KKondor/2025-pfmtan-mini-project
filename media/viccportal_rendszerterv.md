@@ -38,14 +38,15 @@ Jó olvashatóság több fajta méretü eszközön. Gyors betöltési idő
 ## Funkcionális terv
 
 ### Rendszerszereplők
-
+Felhasználó, rendszeradminisztrátor
 ### Rendszerhasználati esetek és lefutásaik
-
+1. Vicc kérése: A felhasználó gomb nyomására kér viccet, ami az oldal javascript segítségével kér a backend-től és az ad egy random viccet az adatbázisból.
+2. Vicc értékelése: A felhasználó értékeli egy like vagy dislike gomb nyomására, az oldal ennek hatására jelez a backend-nek hogy az adatbázisban növelje vagy csökkentse az értékelés szintjét.
+3. Vicc toplista: A felhasználó megtekinti a viccek listáját értékelés alapján csökkentve rendezve. Ezt a backend adatbázistól kéri le.
 ### Határosztályok
-
+Ha nincs vicc, vagy nem fér hozzá az adatbázishoz az oldal akkor ezt hibával jelezzük a felhasználó felé.
 ### Menü-hierarchiák
-
-### Képernyőtervek
+A felhasználó először a main-page csatlakozik, ahol talál egy generálás gombot, a viccet, értékelési gombokat és egy hyperlinket a leaderboard-page -re. A leaderboard-page tartalmaz egy listát és egy hyperlinket vissza a main-page -re.
 
 ---
 
