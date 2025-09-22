@@ -29,10 +29,9 @@ Viccek adatbázis ami tartalmazza a viccet és értékelését.
 ## Követelmények
 
 ### Funkcionális követelmények
-
+Vicc betöltése, vicc értékelése, viccek listázása értékelés szerint
 ### Nemfunkcionális követelmények
-
-### Törvényi előírások, szabványok
+Jó olvashatóság több fajta méretü eszközön. Gyors betöltési idő
 
 ---
 
