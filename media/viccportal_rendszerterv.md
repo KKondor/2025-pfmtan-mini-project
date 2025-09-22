@@ -60,6 +60,18 @@ A felhasználó először a main-page csatlakozik, ahol talál egy generálás g
 
 ### Fejlesztő eszközök
 
+A projekt fejlesztéséhez az alábbi eszközöket és technológiákat használjuk:
+
+- **Programozási nyelvek**:
+  - **HTML/CSS**: A frontend megjelenítéséhez és dizájnhoz.
+  - **JavaScript**: A dinamikus interakciók és az API-k kezelése a frontend oldalon.
+  - **Python**: A backend logika, adatbázis-kezelés és API-k fejlesztéséhez.
+
+- **Adatbázis**:
+  
+- **Verziókezelés**:
+  - **Git**: A kód nyomon követésére és kezelésére, amely lehetővé teszi a csapat számára a párhuzamos munkát és a könnyű kódmegosztást.
+
 ### Keretrendszer (pl. Spring)
 
 A backend fejlesztéséhez a **Flask** keretrendszert használjuk, amely lehetővé teszi a gyors és egyszerű webes API-k fejlesztését. A Flask kezeli a viccek betöltését az adatbázisból, a felhasználói **like** és **dislike** értékelések tárolását, valamint a **toplista** dinamikus frissítését. Az alkalmazás RESTful API-t biztosít, amely lehetővé teszi a viccek és azok értékeléseinek lekérését, illetve az aktuális rangsor megjelenítését.
