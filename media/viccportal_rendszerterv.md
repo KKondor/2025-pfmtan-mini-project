@@ -18,10 +18,11 @@ Kondor Kristóf-Frontend interface fejlesztő, Sebestyén Bence-Backend python+f
 ## Üzleti folyamatok modellje
 
 ### Üzleti szereplők
-
+Felhasználó
 ### Üzleti folyamatok
-
+A felhasználó gombbal kérhet viccet és gombok segítségével értékelheti a viccet. 
 ### Üzleti entitások
+Viccek adatbázis ami tartalmazza a viccet és értékelését.
 
 ---
 
