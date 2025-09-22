@@ -61,6 +61,8 @@ Jó olvashatóság több fajta méretü eszközön. Gyors betöltési idő
 
 ### Keretrendszer (pl. Spring)
 
+A backend fejlesztéséhez a **Flask** keretrendszert használjuk, amely lehetővé teszi a gyors és egyszerű webes API-k fejlesztését. A Flask kezeli a viccek betöltését az adatbázisból, a felhasználói **like** és **dislike** értékelések tárolását, valamint a **toplista** dinamikus frissítését. Az alkalmazás RESTful API-t biztosít, amely lehetővé teszi a viccek és azok értékeléseinek lekérését, illetve az aktuális rangsor megjelenítését.
+
 ---
 
 ## Absztrakt domain modell
