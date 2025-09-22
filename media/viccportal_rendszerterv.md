@@ -81,8 +81,36 @@ A backend fejlesztéséhez a **Flask** keretrendszert használjuk, amely lehető
 ## Absztrakt domain modell
 
 ### Domain specifikáció, fogalmak
+Rendszeradminisztrátor: Az a személy aki a vicc adatbázis tartalmáért felelős.
+
+Felhasználó: A végfelhasználó aki vicceket kér és értekeli őket.
+
+Vicc: A vicc amit a felhasználók kérnek és értékelnek. Tartalmaz setup, punchline, kategória és értekelést.
+
+Érékelés: Egy numerikus szám ami nagyobb minnél több pozitív értékelést kapott. Ez a szám mehet minuszba is ha több negatív értékelést kapott mint pozitívat.
+
+Leaderboard: Az összes vicc és hozzátartozó értékelési szám.
 
 ### Absztrakt komponensek, ezek kapcsolatai
+#### Felhasználói interakciók
+
+A felhasználó az, aki a rendszer egyik fő komponense, és az alábbi interakciók révén éri el a kívánt szolgáltatásokat:
+Viccek kérése:
+
+A felhasználó kér egy viccet, ami a vicc generátort aktiválja. A vicc generátor visszaad egy viccet a rendszernek.
+
+Viccek értékelése:
+
+A felhasználó pontozza a viccet. Az értékelő rendszer tárolja és frissíti a vicc pontszámát.
+
+Leaderboard megtekintése:
+
+A felhasználó megtekintheti a leaderboardot, amely a legjobb viccek rangsorát mutatja. A leaderboard az összesített értékelések alapján frissül.
+
+#### Háttérlogika
+
+
+#### Adatbázis
 
 ---
 
