@@ -58,6 +58,15 @@ A projektben nincs szükség külső szoftverkomponensek vagy szolgáltatások v
 
 ### Hardver és hálózati topológia
 
+A rendszer működéséhez nincs szükség dedikált fizikai szerverre vagy külön hardverbeszerzésre.  
+A **backend** a Flask keretrendszerrel futtatva lokálisan működik, a **felhasználói felület** webböngészőből (pl. Chrome, Firefox) érhető el.  
+Az **adatbázis** a Railway MySQL szolgáltatásban található, amely felhőalapú megoldásként biztosítja a szükséges erőforrásokat és távoli elérhetőséget.  
+
+A hálózati architektúra egyszerű kliens–szerver modellre épül:  
+1. A felhasználó webböngészője kapcsolódik a Flask backendhez.
+2. A Flask szerver HTTP kéréseken keresztül kommunikál a Railway MySQL adatbázissal.
+3. Az adatbázis interneten keresztül érhető el, biztonságos, titkosított kapcsolaton.
+
 ### Fizikai alrendszerek
 
 ### Fejlesztő eszközök
