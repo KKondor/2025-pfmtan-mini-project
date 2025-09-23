@@ -69,6 +69,12 @@ A hálózati architektúra egyszerű kliens–szerver modellre épül:
 
 ### Fizikai alrendszerek
 
+A rendszer működését az alábbi fizikai komponensek biztosítják:
+
+- **Felhasználói eszközök:** számítógépek, laptopok vagy okostelefonok, amelyek webböngészőt futtatnak, és ezen keresztül érik el az alkalmazást.
+- **Fejlesztői környezet:** a csapattagok számítógépei, ahol a Flask alkalmazás lokálisan fut és tesztelhető.
+- **Adatbázis szerver:** a Railway által biztosított felhőalapú MySQL szolgáltatás, amely a szolgáltató adatközpontjában elhelyezett fizikai szervereken fut.
+
 ### Fejlesztő eszközök
 
 A projekt fejlesztéséhez az alábbi eszközöket és technológiákat használjuk:
