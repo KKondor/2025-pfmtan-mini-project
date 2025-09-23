@@ -84,7 +84,7 @@ A projekt fejlesztéséhez az alábbi eszközöket és technológiákat használ
   - **JavaScript**: A dinamikus interakciók és az API-k kezelése a frontend oldalon.
   - **Python**: A backend logika, adatbázis-kezelés és API-k fejlesztéséhez.
 
-- **Adatbázis**:
+- **Adatbázis**: Railway MySQL
   
 - **Verziókezelés**:
   - **Git**: A kód nyomon követésére és kezelésére, amely lehetővé teszi a csapat számára a párhuzamos munkát és a könnyű kódmegosztást.
