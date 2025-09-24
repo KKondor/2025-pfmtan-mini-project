@@ -190,7 +190,11 @@ A viccportál architektúrája lehetővé teszi, hogy **könnyen bővíthető le
 
 ### Biztonsági funkciók
 
----
+A viccportál architektúrája tartalmaz alapvető **biztonsági mechanizmusokat**, hogy a rendszer működése és az adatok védettek legyenek.
+
+**Fő biztonsági intézkedések:**
+- **Adatvédelem és integritás:** A viccek és azok like/dislike értékei a MySQL adatbázisban tárolódnak, a backend gondoskodik az adatok épségéről.   
+- **Rendszer stabilitás:** A backend logika elkülönítve kezeli a különböző funkciókat (vicc lekérése, like/dislike, leaderboard), így minimalizálva a hibák és visszaélések kockázatát.
 
 ## Adatbázis terv
 
