@@ -174,6 +174,11 @@ A projekt a **Model-View-Controller (MVC)** tervezési mintát követi, amely se
 
 ### Változások kezelése
 
+- **Új funkciók hozzáadása:** Az új gombok, menük vagy statisztikák könnyen integrálhatók a frontendbe és backendbe, anélkül, hogy a meglévő logikát megsértenénk.  
+- **Adatbázis bővítése:** A MySQL adatbázis struktúrája moduláris, így új mezők vagy táblák hozzáadása a modelhez minimális hatással van a Controller és View rétegekre.  
+- **Technológiai frissítések:** A frontend és backend komponensek különválasztása lehetővé teszi a technológiák (pl. JavaScript könyvtárak, Flask verzió) cseréjét anélkül, hogy az egész rendszert újra kellene írni.  
+- **Verziókezelés** (Git) biztosítja a kód és a konfigurációk változásainak nyomon követését.
+
 ### Rendszer bővíthetősége
 
 ### Biztonsági funkciók
