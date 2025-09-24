@@ -135,7 +135,42 @@ A felhasználó megtekintheti a leaderboardot, amely a legjobb viccek rangsorát
 
 ### Egy architekturális tervezési minta (pl. MVC, 3-rétegű alkalmazás, …)
 
+![MVC modell](MVC_modell.png)
+
+A projekt a **Model-View-Controller (MVC)** tervezési mintát követi, amely segít elkülöníteni az alkalmazás különböző részeit és átláthatóbbá tenni a fejlesztést.
+
 ### Az alkalmazás rétegei, fő komponensei, ezek kapcsolatai
+
+### Model (Adatmodell)
+
+**Feladata:** az adatbázissal való kommunikáció.  
+
+- A viccek és azok like/dislike értékei itt kerülnek tárolásra és lekérdezésre.  
+- A MySQL adatbázisban tárolt vicceket a **Python Flask** backend olvassa ki, és frissíti a like/dislike értékeket.
+
+### View (Nézet / UI)
+
+**Feladata:** a felhasználó számára megjeleníteni az adatokat.  
+
+- A **HTML/CSS** biztosítja az oldal felépítését és stílusát.  
+- A **JavaScript** dinamikusan frissíti a viccek megjelenítését és a leaderboardot.  
+- Példa: amikor a felhasználó rákattint a **“Generate”** gombra, a View frissül az új vicc megjelenítésével.
+
+### Controller (Vezérlő / Logika)
+
+**Feladata:** összekapcsolni a Modelt és a View-t.  
+
+- A **Python Flask** backend kezeli a felhasználói kéréseket (pl. új vicc generálása, like/dislike mentése), lekéri az adatokat a Modelből, majd visszaküldi a View-nak a megjelenítésre.  
+- A **JavaScript** részt vesz a kliens oldali interakciók kezelésében.
+
+
+| Csapattag         | Használt technológiák      | Feladat |
+|------------------|---------------------------|---------|
+| **Kondor Kristóf** | `HTML`, `CSS`             | **View** megvalósítása |
+| **Nyiri László**   | `JavaScript`              | **View** dinamikus viselkedése, kliens oldali kommunikáció a **Controller**-rel |
+| **Sebestyén Bence**| `Python, Flask`            | **Controller**, backend logika, API végpontok |
+| **Kacsó Melinda**  | `Railway MySQL`           | **Model**, viccek és értékelések tárolása |
+
 
 ### Változások kezelése
 
