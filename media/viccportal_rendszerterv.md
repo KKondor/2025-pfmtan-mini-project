@@ -181,6 +181,13 @@ A projekt a **Model-View-Controller (MVC)** tervezési mintát követi, amely se
 
 ### Rendszer bővíthetősége
 
+A viccportál architektúrája lehetővé teszi, hogy **könnyen bővíthető legyen új funkciókkal** a jövőben. A rétegek külön-külön fejleszthetők, minimális hatással a többi komponensre.
+
+- **Új vicctípusok vagy kategóriák:** Új mezők vagy táblák hozzáadhatók a MySQL adatbázishoz anélkül, hogy a meglévő adatkezelést zavarnák.  
+- **Frontend funkciók bővítése:** Új gombok, menük vagy vizuális elemek integrálása a View rétegbe egyszerűen megvalósítható, a meglévő logika változtatása nélkül.  
+- **Backend logika bővítése:** Új API végpontok vagy üzleti logika hozzáadása a Flask Controller rétegbe a meglévő működés mellett.  
+- **Technológiai moduláris bővítés:** A rendszer rétegeinek elkülönítése lehetővé teszi új könyvtárak, keretrendszerek vagy szolgáltatások integrálását a jövőben.
+
 ### Biztonsági funkciók
 
 ---
