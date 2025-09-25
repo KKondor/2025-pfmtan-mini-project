@@ -208,11 +208,37 @@ A viccportál architektúrája tartalmaz alapvető **biztonsági mechanizmusokat
 
 ## Implementációs terv
 
-### Perzisztencia-osztályok
+# Implementációs terv
 
-### Üzleti logika osztályai
+## Perzisztencia osztályok (Model)
 
-### Kliensoldal osztályai
+- **JokeRepository**  
+  - Feladata: kapcsolat az adatbázissal (Railway MySQL).  
+  - Műveletek:
+    - `get_random_joke()`: visszaad egy véletlenszerű viccet az adatbázisból.  
+    - `update_likes(joke_id)`: növeli egy vicc like értékét.  
+    - `update_dislikes(joke_id)`: növeli egy vicc dislike értékét.  
+    - `get_top_jokes(limit)`: visszaadja a legtöbb like-ot kapott vicceket.  
+
+## Üzleti logika osztályai (Controller)
+
+- **JokeService**  
+  - Feladata: a viccekhez kapcsolódó üzleti logika kezelése.  
+  - Műveletek:
+    - `generate_joke()`: új vicc lekérése a JokeRepository segítségével.  
+    - `like_joke(joke_id)`: like növelése.  
+    - `dislike_joke(joke_id)`: dislike növelése.  
+    - `get_leaderboard()`: a top viccek visszaadása.  
+
+- **FlaskController (API végpontok)**  
+  - Feladata: a frontendtől érkező kérések kezelése, a megfelelő JokeService metódus meghívása.
+
+    - `GET /joke`: új vicc lekérése.  
+    - `POST /joke/<id>/like`: vicc like növelése.  
+    - `POST /joke/<id>/dislike`: vicc dislike növelése.  
+    - `GET /leaderboard`: toplista lekérése.
+
+## Kliens oldal osztályai (View)
 
 ---
 
