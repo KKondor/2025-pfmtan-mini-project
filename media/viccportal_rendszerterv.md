@@ -215,10 +215,9 @@ A viccportál architektúrája tartalmaz alapvető **biztonsági mechanizmusokat
 - **JokeRepository**  
   - Feladata: kapcsolat az adatbázissal (Railway MySQL).  
   - Műveletek:
-    - `get_random_joke()`: visszaad egy véletlenszerű viccet az adatbázisból.  
-    - `update_likes(joke_id)`: növeli egy vicc like értékét.  
-    - `update_dislikes(joke_id)`: növeli egy vicc dislike értékét.  
-    - `get_top_jokes(limit)`: visszaadja a legtöbb like-ot kapott vicceket.  
+    - `get_joke_by_id(joke_id)`: visszaad egy viccet id alapján az adatbázisból.
+    - `get_jokes_list(sort_order,filter_type)`: visszaad egy listát az adatbázisból ami rendezve és szürve van.
+    - `update_joke_rating(joke_id,operating)`: növeli vagy csökkenti az adott vicc értékelését 1-el.
 
 ## Üzleti logika osztályai (Controller)
 
