@@ -208,9 +208,7 @@ A viccportál architektúrája tartalmaz alapvető **biztonsági mechanizmusokat
 
 ## Implementációs terv
 
-# Implementációs terv
-
-## Perzisztencia osztályok (Model)
+### Perzisztencia osztályok (Model)
 
 - **JokeRepository**  
   - Feladata: kapcsolat az adatbázissal (Railway MySQL).  
@@ -219,25 +217,24 @@ A viccportál architektúrája tartalmaz alapvető **biztonsági mechanizmusokat
     - `get_jokes_list(sort_order,filter_type)`: visszaad egy listát az adatbázisból ami rendezve és szürve van.
     - `update_joke_rating(joke_id,operating)`: növeli vagy csökkenti az adott vicc értékelését 1-el.
 
-## Üzleti logika osztályai (Controller)
+### Üzleti logika osztályai (Controller)
 
 - **JokeService**  
   - Feladata: a viccekhez kapcsolódó üzleti logika kezelése.  
   - Műveletek:
     - `generate_joke()`: új vicc lekérése a JokeRepository segítségével.  
-    - `like_joke(joke_id)`: like növelése.  
-    - `dislike_joke(joke_id)`: dislike növelése.  
-    - `get_leaderboard()`: a top viccek visszaadása.  
+    - `rate_joke(joke_id, value)`: a vicc értékelése, ahol a `value` csak `1` (like) vagy `-1` (dislike) lehet.  
+    - `get_leaderboard()`: a top viccek visszaadása a `rating` értékek alapján.
 
 - **FlaskController (API végpontok)**  
   - Feladata: a frontendtől érkező kérések kezelése, a megfelelő JokeService metódus meghívása.
 
-    - `GET /joke`: új vicc lekérése.  
-    - `POST /joke/<id>/like`: vicc like növelése.  
-    - `POST /joke/<id>/dislike`: vicc dislike növelése.  
+    - `GET /joke`: vicc lekérése.    
     - `GET /leaderboard`: toplista lekérése.
+    - `POST /joke/<id>/rate`: vicc értékelése (`1` like esetén, `-1` dislike esetén).  
+      - Request body például: `{ "value": 1 }` vagy `{ "value": -1 }`
 
-## Kliens oldal osztályai (View)
+### Kliens oldal osztályai (View)
 
 ---
 
