@@ -81,7 +81,7 @@ Az **adatbázis** a Railway MySQL szolgáltatásban található, amely felhőala
 
 A hálózati architektúra egyszerű kliens–szerver modellre épül:  
 1. A felhasználó webböngészője kapcsolódik a Flask backendhez.
-2. A Flask szerver HTTP kéréseken keresztül kommunikál a Railway MySQL adatbázissal.
+2. A Flask a `mysql-connector` driveren keresztül kommunikál a Railway MySQL adatbázissal.
 3. Az adatbázis interneten keresztül érhető el, biztonságos, titkosított kapcsolaton.
 
 ### Fizikai alrendszerek
@@ -168,8 +168,8 @@ A projekt a **Model-View-Controller (MVC)** tervezési mintát követi, amely se
 
 **Feladata:** az adatbázissal való kommunikáció.  
 
-- A viccek és azok like/dislike értékei itt kerülnek tárolásra és lekérdezésre.  
-- A MySQL adatbázisban tárolt vicceket a **Python Flask** backend olvassa ki, és frissíti a like/dislike értékeket.
+- A viccek és azok értékelései itt kerülnek tárolásra és lekérdezésre.  
+- A MySQL adatbázisban tárolt vicceket a **Python Flask** backend olvassa ki, és frissíti a rating értéket.
 
 ### View (Nézet / UI)
 
@@ -183,7 +183,7 @@ A projekt a **Model-View-Controller (MVC)** tervezési mintát követi, amely se
 
 **Feladata:** összekapcsolni a Modelt és a View-t.  
 
-- A **Python Flask** backend kezeli a felhasználói kéréseket (pl. új vicc generálása, like/dislike mentése), lekéri az adatokat a Modelből, majd visszaküldi a View-nak a megjelenítésre.  
+- A **Python Flask** backend kezeli a felhasználói kéréseket (pl. új vicc generálása), lekéri az adatokat a Modelből, majd visszaküldi a View-nak a megjelenítésre.  
 - A **JavaScript** részt vesz a kliens oldali interakciók kezelésében.
 
 
