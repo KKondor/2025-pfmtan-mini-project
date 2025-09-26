@@ -2,7 +2,7 @@
 
 ## A rendszer célja
 
-Egy egyszerű weboldal létrehozása, ami egy gomb megnyomására kér egy viccet a backend adatbázístóé és megjeleníti a képernyőn. Továbbá ezt a viccet a felhasználó értékelheti és egy leader board oldalon megtekintheti a viccek értékelését.
+Egy egyszerű weboldal létrehozása, ami egy gomb megnyomására kér egy viccet a backend adatbázistól és megjeleníti a képernyőn. Továbbá ezt a viccet a felhasználó értékelheti és egy leaderboard oldalon megtekintheti a viccek értékelését.
 
 ---
 
@@ -104,7 +104,7 @@ Felhasználó: A végfelhasználó aki vicceket kér és értekeli őket.
 
 Vicc: A vicc amit a felhasználók kérnek és értékelnek. Tartalmaz setup, punchline, kategória és értekelést.
 
-Érékelés: Egy numerikus szám ami nagyobb minnél több pozitív értékelést kapott. Ez a szám mehet minuszba is ha több negatív értékelést kapott mint pozitívat.
+Értékelés: Egy numerikus szám ami nagyobb minnél több pozitív értékelést kapott. Ez a szám mehet minuszba is ha több negatív értékelést kapott mint pozitívat.
 
 Leaderboard: Az összes vicc és hozzátartozó értékelési szám.
 
@@ -118,7 +118,7 @@ A felhasználó kér egy viccet, ami a vicc generátort aktiválja. A vicc gener
 
 Viccek értékelése:
 
-A felhasználó pontozza a viccet. Az értékelő rendszer tárolja és frissíti a vicc pontszámát.
+A felhasználó értékeli (like/dislike) a viccet. Az értékelő rendszer tárolja és frissíti a vicc pontszámát.
 
 Leaderboard megtekintése:
 
