@@ -8,10 +8,27 @@ Egy egyszerű weboldal létrehozása, ami egy gomb megnyomására kér egy vicce
 
 ## Projekt terv
 
-### Projektszerepkörök, felelősségek
-Frontend interface fejlesztő, Frontend Javascript fejlesztő, Backend python+flask fejlesztő, Backend adatbázis fejlesztő
-### Projektmunkások és felelősségeik
-Kondor Kristóf-Frontend interface fejlesztő, Sebestyén Bence-Backend python+flask fejlesztő, Kacsó Melinda-Backend adatbázis fejlesztő, Nyiri László-Frontend Javascript
+### Projektszerepkörök és felelősségek
+
+- **Frontend UI fejlesztő**  
+  A felhasználói felület statikus megjelenítéséért felel.
+- **Frontend JavaScript fejlesztő**  
+  A dinamikus funkciókért és a kliens–szerver kommunikációért felel.
+- **Backend Python + Flask fejlesztő**  
+  Az üzleti logika és az API végpontok megvalósításáért felel.
+- **Backend adatbázis fejlesztő**  
+  Az adatbázis séma, tárolt adatok és SQL műveletek kialakításáért felel.
+
+---
+
+### Projektcsapattagok és feladataik
+
+| Név                | Szerepkör                       | Felelősség |
+|---------------------|--------------------------------|------------|
+| **Kondor Kristóf**  | Frontend UI fejlesztő          | A felhasználói felület kialakítása |
+| **Nyiri László**    | Frontend JavaScript fejlesztő  | Dinamikus viselkedés és API kommunikáció |
+| **Sebestyén Bence** | Backend Python + Flask fejlesztő | Backend logika, API végpontok |
+| **Kacsó Melinda**   | Backend adatbázis fejlesztő    | Adatbázis séma, viccek és értékelések tárolása |
 
 ---
 
