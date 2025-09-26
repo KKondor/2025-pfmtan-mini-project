@@ -126,6 +126,12 @@ A felhasználó megtekintheti a leaderboardot, amely a legjobb viccek rangsorát
 
 #### Háttérlogika
 
+A háttérlogika a felhasználói kérések feldolgozásáért és az adatbázissal való kommunikációért felelős.
+Fő komponensei:
+- **JokeService**: üzleti logika, amely kezeli a viccek lekérését, értékelését és a toplista előállítását.
+- **FlaskController**: kezeli a frontendtől érkező HTTP kéréseket, és meghívja a megfelelő JokeService metódusokat.
+
+A háttérlogika biztosítja, hogy a felhasználó mindig a megfelelő adatot kapja, és az értékelések azonnal frissüljenek.
 
 #### Adatbázis
 
