@@ -100,7 +100,7 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 5rem;
+    margin-top: 0rem;
 }
 
 .like-btn,.dislike-btn {
@@ -175,9 +175,6 @@ footer {
     }
     .text-block{
         padding: 0rem;
-    }
-    .buttons{
-        margin-top: 0rem;
     }
 }
 
