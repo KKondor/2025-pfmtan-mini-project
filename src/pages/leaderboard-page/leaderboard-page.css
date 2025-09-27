@@ -16,7 +16,7 @@
   z-index: 1;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 480px) or (max-height: 400px) {
   .hero {
     height: 35vh;
   }
@@ -47,8 +47,6 @@
   max-width: 1300px;
   max-height: 70vh; 
   overflow-y: auto;
-
-  transform: translateY(-15rem);
 }
 
 .leaderboard-item {
