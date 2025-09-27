@@ -1,5 +1,5 @@
 from repository import Joke, JokeRepository
-from tyoing import Optional, List
+from typing import Optional, List
 import random
 
 class JokeService:
@@ -16,3 +16,14 @@ class JokeService:
         
     def get_leaderboard(self, sort_order: str = "desc", filter_type: str = "all") -> list[Joke]:
         return self.repository.get_jokes_list(sort_order, filter_type)
+    
+    def rate_joke(self, joke_id: int, value: int):
+        if value != 1 and value != -1:
+            raise ValueError("Value must be 1 (like) or -1 (dislike).")
+        else:
+            success = self.repository.update_joke_rating(joke_id, value)
+            if not success:     
+                if self.repository.get_joke_by_id(joke_id) is None:
+                    raise ValueError(f"Joke with ID {joke_id} not found.")
+                else:
+                    raise RuntimeError(f"Failed to update rating for joke {joke_id}.")
