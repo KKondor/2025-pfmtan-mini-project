@@ -98,9 +98,13 @@ body{
 
 .buttons{
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 0rem;
+    justify-content: space-between; 
+    gap: 70vw;
+    position: fixed;
+    bottom: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 5;
 }
 
 .like-btn,.dislike-btn {
