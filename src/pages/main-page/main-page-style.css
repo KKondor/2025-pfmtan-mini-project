@@ -23,7 +23,7 @@ body{
     border-bottom-right-radius: 10%;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 480px) or (max-height: 400px) {
   .hero {
     height: 35vh;
   }
