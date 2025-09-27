@@ -2,6 +2,12 @@ import os
 from dotenv import load_dotenv
 import mysql.connector
 
+class Joke:
+    def __init__(self, id, text, rating):
+        self.id = id
+        self.text = text
+        self.rating = rating
+
 load_dotenv() # load environment variables from .env
 
 class JokeRepository:
