@@ -19,3 +19,15 @@ class JokeRepository:
             password=os.getenv("DB_PASSWORD"),
             database=os.getenv("DB_NAME")
         )
+
+    def get_joke_by_id(self, joke_id):
+        pass
+
+    def get_jokes_list(self, sort_order, filter_type):
+        pass
+
+    def update_joke_rating(self, joke_id, operating):
+        pass
+
+    def close(self):
+        self.conn.close()
