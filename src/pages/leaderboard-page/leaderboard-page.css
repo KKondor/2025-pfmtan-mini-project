@@ -32,7 +32,7 @@
 
     background-color: #9b9b9b;
     border: medium black solid;
-    border-radius: 5%;
+    border-radius: 2%;
     list-style: none;
     padding: 0;
     margin: -10rem auto 2rem;
@@ -67,6 +67,8 @@ footer {
     text-align: center;
     padding-top: 1rem;
     padding-bottom: 1rem;
+
+    z-index: 3;
 }
 
 .mp-link {
