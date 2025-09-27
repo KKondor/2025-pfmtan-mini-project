@@ -1,4 +1,5 @@
 from repository import Joke, JokeRepository
+from tyoing import Optional, List
 import random
 
 class JokeService:
@@ -12,3 +13,6 @@ class JokeService:
             return joke
         else:
             raise ValueError("No joke found with the generated ID.")
+        
+    def get_leaderboard(self, sort_order: str = "desc", filter_type: str = "all") -> list[Joke]:
+        return self.repository.get_jokes_list(sort_order, filter_type)
