@@ -259,6 +259,10 @@ A viccportál architektúrája tartalmaz alapvető **biztonsági mechanizmusokat
 
 ### Kliens oldal osztályai (View)
 
+- **Main-Page**
+  - Feladata: Az az oldal, ahol a felhasználó vicceket tudd kérni gomb segítsésével és értékelheti őket.
+- **Leaderboard-page**
+  - Feladata: Az az oldal, ahol a felhasználó megtekintheti a viccek listáját, értékelés szerinti csökkenő sorrendbe.
 ---
 
 ## Tesztterv
