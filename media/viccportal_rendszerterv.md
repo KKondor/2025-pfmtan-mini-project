@@ -222,14 +222,19 @@ A viccportál architektúrája tartalmaz alapvető **biztonsági mechanizmusokat
 ## Adatbázis terv
 
 ### Logikai adatmodell
-Csal egy entitást tartalmaz: jokes
+Csalk egy entitást tartalmaz: jokes
 | Attribútum         | Adattípus      | Leírás |
 |------------------|---------------------------|---------|
 |idx|Egész szám, INT|Primary key, Nem lehet null.|
 |joke_text|Szöveg, TEXT|A vicc szövege.|
 |joke_type|Szöveg, VARCHAR(50)|A vicc kategóriái: <br>informatics, animal, weather, mom, dad, school, pun|
 |rating|Egész szám, INT|Az értékelés egy számban kifejezve. <br>Like esetén nő, dislike esetén csökken az értéke.|
+
 ### Tárolt eljárások
+
+-`get_joke_by_id`: visszaad egy viccet id alapján az adatbázisból.
+-`get_jokes_list`: visszaad egy listát az adatbázisból ami rendezve és szürve van.
+-`update_joke_rating`: növeli vagy csökkenti az adott vicc értékelését add vagy subtrack művelettel.
 
 ### Fizikai adatmodellt legeneráló SQL szkript
 
@@ -243,8 +248,8 @@ Csal egy entitást tartalmaz: jokes
   - Feladata: kapcsolat az adatbázissal (Railway MySQL).  
   - Műveletek:
     - `get_joke_by_id(joke_id)`: visszaad egy viccet id alapján az adatbázisból.
-    - `get_jokes_list(sort_order,filter_type)`: visszaad egy listát az adatbázisból ami rendezve és szürve van.
-    - `update_joke_rating(joke_id,operating)`: növeli vagy csökkenti az adott vicc értékelését 1-el.
+    - `get_jokes_list(sort_order,filter_type)`: visszaad egy 5 elemü listát az adatbázisból ami alap decs és all értékekkel rendelkezik.
+    - `update_joke_rating(joke_id,operating)`: növeli vagy csökkenti az adott vicc értékelését 1 és -1 alapján.
 
 ### Üzleti logika osztályai (Controller)
 
