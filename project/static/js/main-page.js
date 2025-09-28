@@ -54,6 +54,26 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
+    // Like button logic
+    likeBtn.addEventListener("click", () => {
+        const currentRating = parseInt(buttonsDiv.dataset.rating);
+        const jokeId = likeBtn.dataset.id;
+        let value = 0;
+
+        if (currentRating === 0) {
+            value = 1;
+            buttonsDiv.dataset.rating = "1";
+        } else if (currentRating === 1) {
+            value = -1; // undo like
+            buttonsDiv.dataset.rating = "0";
+        } else if (currentRating === -1) {
+            value = 2; // from dislike to like
+            buttonsDiv.dataset.rating = "1";
+        }
+
+        rateJoke(jokeId, value);
+    });
+
 
 
     });
