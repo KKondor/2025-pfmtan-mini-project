@@ -14,14 +14,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
             const joke = await response.json();
 
-            // If text contains a separator, split into setup and punchline
-            let setup = joke.text;
-            let punchline = "";
-            if (joke.text.includes("|")) {
-                const [s, p] = joke.text.split("|");
-                setup = s.trim();
-                punchline = p ? p.trim() : "";
-            }
+            let setup = joke.setup;
+            let punchline = joke.punchline;
 
             // Update DOM
             setupEl.textContent = setup;
