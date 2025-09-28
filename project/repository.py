@@ -42,7 +42,7 @@ class JokeRepository:
         finally:
             cursor.close()
 
-    def get_jokes_list(self, sort_order: str = "desc", filter_type: str = "all") -> List[Joke]: # Returns a list of 5!!! Joke objects
+    def get_jokes_list(self, sort_order: str = "rating", filter_type: str = "all") -> List[Joke]: # Returns a list of 5!!! Joke objects
         cursor = self.conn.cursor()
         jokes_list: List[Joke] = []
         try:

@@ -21,7 +21,7 @@ class JokeService:
         else:
             raise ValueError("No joke found with the generated ID.")
         
-    def get_leaderboard(self, sort_order: str = "desc", filter_type: str = "all") -> list[Joke]:
+    def get_leaderboard(self, sort_order: str = "rating", filter_type: str = "all") -> list[Joke]:
         jokes = self.repository.get_jokes_list(sort_order, filter_type)
         for joke in jokes:
             if "?" in joke.text:
