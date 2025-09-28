@@ -26,5 +26,20 @@ document.addEventListener("DOMContentLoaded", () => {
             // Update DOM
             setupEl.textContent = setup;
             punchlineEl.textContent = punchline;
-        } 
+
+            // Enable rating buttons
+            likeBtn.dataset.id = joke.id;
+            dislikeBtn.dataset.id = joke.id;
+            buttonsDiv.dataset.rating = "0";
+
+            likeBtn.disabled = false;
+            dislikeBtn.disabled = false;
+        }
+        catch (err) {
+            console.error("Failed to load joke:", err);
+        }
+    });
+
+
+
     });
