@@ -1,4 +1,4 @@
-from flask import Flask, jsonify, render_template
+from flask import Flask, jsonify, request, render_template
 from services import JokeService
 from repository import JokeRepository
 
@@ -33,7 +33,15 @@ def get_leaderboard():
 
 @app.route('/joke/<int:id>/rate', methods=['POST'])
 def rate_joke(id):
-    pass
+    data = request.get_json()
+    value = data.get("value")
+    try:
+        service.rate_joke(id, value)
+        return jsonify({"success": True}), 200
+    except ValueError as e:
+        return jsonify({"error": str(e)}), 400
+    except RuntimeError as e:
+        return jsonify({"error": str(e)}), 500
 
 if __name__ == "__main__":
     app.run(debug=True)
