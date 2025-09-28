@@ -24,7 +24,23 @@ class JokeRepository:
         )
 
     def get_joke_by_id(self, joke_id: int) -> Optional[Joke]: # Returns a Joke object or None if not found
-        pass
+        cursor = self.conn.cursor()
+        try:
+            cursor.callproc('get_joke_by_id', (joke_id,))
+
+            result = None
+            for result_set in cursor.stored_results():
+                result = result_set.fetchone()
+                break
+
+            if result:
+                joke = Joke(id=result[0], text=result[1], rating=result[2])
+                return joke
+            else:
+                return None
+            
+        finally:
+            cursor.close()
 
     def get_jokes_list(self, sort_order: str = "desc", filter_type: str = "all") -> List[Joke]: # Returns a list of 5!!! Joke objects
         pass
