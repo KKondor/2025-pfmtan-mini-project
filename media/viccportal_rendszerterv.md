@@ -296,9 +296,18 @@ VALUES ('Why do programmers prefer dark mode? Because light attracts bugs.', 'in
       - Az értékelési állapot a `data-rating` attribútumban tárolódik.  
 
     - **Error handling:**  
-      - If the fetch request fails, an error message is shown in the console (`console.error`).  
+      - Ha a fetch hívás sikertelen, hibaüzenet jelenik meg a konzolban (`console.error`).
+        
 - **Leaderboard-page**
   - Feladata: Az az oldal, ahol a felhasználó megtekintheti a viccek listáját, értékelés szerinti csökkenő sorrendbe.
+   - `GET /leaderboard`: toplista lekérése.  
+      - Az oldal betöltésekor (`DOMContentLoaded` esemény) indul a fetch hívás.  
+      - A meglévő lista (`#leaderboard-list`) kiürítésre kerül.  
+      - Az új viccek `<li>` elemekként kerülnek megjelenítésre, `setup`, `punchline` és `rating` értékekkel.  
+      - Ha a vicc `text` tartalmaz `|` jelet, a szöveg szétbontásra kerül `setup` és `punchline` részre.  
+
+    - **Error handling:**  
+       - Ha a fetch sikertelen, hibaüzenet jelenik meg a konzolban (`console.error`).   
 ---
 
 ## Tesztterv
