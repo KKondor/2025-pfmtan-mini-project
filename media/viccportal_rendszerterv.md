@@ -222,7 +222,13 @@ A viccportál architektúrája tartalmaz alapvető **biztonsági mechanizmusokat
 ## Adatbázis terv
 
 ### Logikai adatmodell
-
+Csal egy entitást tartalmaz: jokes
+| Attribútum         | Adattípus      | Leírás |
+|------------------|---------------------------|---------|
+|idx|Egész szám, INT|Primary key, Nem lehet null.|
+|joke_text|Szöveg, TEXT|A vicc szövege.|
+|joke_type|Szöveg, VARCHAR(50)|A vicc kategóriái: <br>informatics, animal, weather, mom, dad, school, pun|
+|rating|Egész szám, INT|Az értékelés egy számban kifejezve. <br>Like esetén nő, dislike esetén csökken az értéke.|
 ### Tárolt eljárások
 
 ### Fizikai adatmodellt legeneráló SQL szkript
