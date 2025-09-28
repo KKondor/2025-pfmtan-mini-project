@@ -66,12 +66,16 @@ document.addEventListener("DOMContentLoaded", () => {
             value = -1; // undo like
             buttonsDiv.dataset.rating = "0";
         } else if (currentRating === -1) {
-            value = 2; // from dislike to like
+            // from dislike to like
+            rateJoke(jokeId, 1); 
+            value = 1;
             buttonsDiv.dataset.rating = "1";
         }
 
+        if (value !== 0) {
         rateJoke(jokeId, value);
-    });
+        }
+});
 
     // Dislike button logic
     dislikeBtn.addEventListener("click", () => {
@@ -86,11 +90,15 @@ document.addEventListener("DOMContentLoaded", () => {
             value = 1; // undo dislike
             buttonsDiv.dataset.rating = "0";
         } else if (currentRating === 1) {
-            value = -2; // from like to dislike
+            // from like to dislike
+            rateJoke(jokeId, -1); 
+            value = -1;
             buttonsDiv.dataset.rating = "-1";
         }
 
+        if (value !== 0) {
         rateJoke(jokeId, value);
+        }
     });
 
 });
