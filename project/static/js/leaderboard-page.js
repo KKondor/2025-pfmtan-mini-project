@@ -43,5 +43,7 @@ document.addEventListener("DOMContentLoaded", async () => {
             leaderboardList.appendChild(li);
             
         });           
+    }catch (err) {
+        console.error("Error loading leaderboard:", err);
     }
   });
