@@ -7,5 +7,8 @@ document.addEventListener("DOMContentLoaded", async () => {
 
         const jokes = await response.json();
 
+        // Clear old list
+        leaderboardList.innerHTML = "";
+
     }
   });
