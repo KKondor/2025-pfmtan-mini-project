@@ -12,7 +12,10 @@ def get_joke():
 
 @app.route('/leaderboard', methods=['GET'])
 def get_leaderboard():
-    pass
+    jokes = service.get_leaderboard()
+    return jsonify([{"id": joke.id, 
+                     "text": joke.text, 
+                     "rating": joke.rating} for joke in jokes])
 
 @app.route('/joke/<int:id>/rate', methods=['POST'])
 def rate_joke(id):
