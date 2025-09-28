@@ -40,6 +40,20 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
+    // Send rating to backend
+    async function rateJoke(jokeId, value) {
+        try {
+            const response = await fetch(`/joke/${jokeId}/rate`, {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ value })
+            });
+            if (!response.ok) throw new Error("Rating request failed");
+        } catch (err) {
+            console.error("Failed to rate joke:", err);
+        }
+    }
+
 
 
     });
