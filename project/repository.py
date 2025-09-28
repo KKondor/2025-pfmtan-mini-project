@@ -8,6 +8,8 @@ class Joke:
         self.id = id
         self.text = text
         self.rating = rating
+        self.setup = "" # just a placeholder, JokeService will seperate setup and punchline from text
+        self.punchline = ""
 
 load_dotenv() # load environment variables from .env
 
