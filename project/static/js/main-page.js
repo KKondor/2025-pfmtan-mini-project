@@ -43,6 +43,11 @@ document.addEventListener("DOMContentLoaded", () => {
                 body: JSON.stringify({ value })
             });
             if (!response.ok) throw new Error("Rating request failed");
+            
+            const ratingEl = document.querySelector(".rating");
+            if (ratingEl) {
+                ratingEl.textContent = parseInt(ratingEl.textContent || "0") + value;
+            }
         } catch (err) {
             console.error("Failed to rate joke:", err);
         }
