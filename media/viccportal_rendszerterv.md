@@ -280,7 +280,23 @@ VALUES ('Why do programmers prefer dark mode? Because light attracts bugs.', 'in
 ### Kliens oldal osztályai (View)
 
 - **Main-Page**
-  - Feladata: Az az oldal, ahol a felhasználó vicceket tudd kérni gomb segítsésével és értékelheti őket.
+  - Feladata: Az az oldal, ahol a felhasználó vicceket tud kérni gomb segítsésével és értékelheti őket.
+    - `GET /joke`: új vicc lekérése.  
+      - A kapott `text` mező feldarabolása `setup` és `punchline` részre (ha tartalmaz `|` elválasztót).  
+      - DOM elemek (`#setup`, `#punchline`) frissítése az új viccel.  
+      - Like/Dislike gombok engedélyezése és `data-id` hozzárendelése.  
+
+    - `POST /joke/<id>/rate`: vicc értékelése.  
+      - A like/dislike gombok az aktuális vicc `id` értékével hívják meg a végpontot.  
+      - Az elküldött értékek lehetnek:  
+        - `1`: like  
+        - `-1`: dislike  
+        - `2`: dislike → like váltás  
+        - `-2`: like → dislike váltás  
+      - Az értékelési állapot a `data-rating` attribútumban tárolódik.  
+
+    - **Error handling:**  
+      - If the fetch request fails, an error message is shown in the console (`console.error`).  
 - **Leaderboard-page**
   - Feladata: Az az oldal, ahol a felhasználó megtekintheti a viccek listáját, értékelés szerinti csökkenő sorrendbe.
 ---
