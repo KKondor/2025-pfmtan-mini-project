@@ -12,14 +12,8 @@ document.addEventListener("DOMContentLoaded", async () => {
 
         // Add jokes to the leaderboard
         jokes.forEach(joke => {
-            let setup = joke.text;
-            let punchline = "";
-
-            if (joke.text.includes("|")) {
-                const [s, p] = joke.text.split("|");
-                setup = s.trim();
-                punchline = p ? p.trim() : "";
-            }
+            let setup = joke.setup;
+            let punchline = joke.punchline;
 
             const li = document.createElement("li");
             li.classList.add("leaderboard-item");
