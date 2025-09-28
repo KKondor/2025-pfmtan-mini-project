@@ -22,5 +22,9 @@ document.addEventListener("DOMContentLoaded", () => {
                 setup = s.trim();
                 punchline = p ? p.trim() : "";
             }
+
+            // Update DOM
+            setupEl.textContent = setup;
+            punchlineEl.textContent = punchline;
         } 
     });
