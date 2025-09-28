@@ -20,8 +20,28 @@ document.addEventListener("DOMContentLoaded", async () => {
                 setup = s.trim();
                 punchline = p ? p.trim() : "";
             }
-        });
 
-        
+            const li = document.createElement("li");
+            li.classList.add("leaderboard-item");
+
+            const setupSpan = document.createElement("span");
+            setupSpan.classList.add("setup");
+            setupSpan.textContent = setup;
+
+            const punchlineSpan = document.createElement("span");
+            punchlineSpan.classList.add("punchline");
+            punchlineSpan.textContent = punchline;
+
+            const ratingSpan = document.createElement("span");
+            ratingSpan.classList.add("rating");
+            ratingSpan.textContent = joke.rating;
+
+            li.appendChild(setupSpan);
+            li.appendChild(punchlineSpan);
+            li.appendChild(ratingSpan);
+
+            leaderboardList.appendChild(li);
+            
+        });           
     }
   });
