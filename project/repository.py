@@ -63,7 +63,27 @@ class JokeRepository:
             cursor.close()
 
     def update_joke_rating(self, joke_id: int, operating: int) -> bool: # Returns True if update was successful, False otherwise
-        pass
+        cursor = self.conn.cursor()
+
+        if operating == 1:
+            operation = 'add'
+        elif operating == -1:
+            operation = 'subtract'
+
+
+        try:
+            cursor.callproc('update_joke_rating', (joke_id, operation))
+            self.conn.commit()
+
+            return True
+
+        except Exception as e:
+
+            self.conn.rollback()
+            return False
+
+        finally:
+            cursor.close()
 
     def close(self):
         self.conn.close()
