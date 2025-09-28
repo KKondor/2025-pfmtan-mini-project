@@ -18,13 +18,13 @@ def leaderboard_page():
 @app.route('/joke', methods=['GET'])
 def get_joke():
     joke = service.generate_joke()
-    return jsonify({"id": joke.id, "text": joke.text, "rating": joke.rating})
+    return jsonify({"id": joke.id, "setup": joke.setup, "punchline": joke.punchline, "rating": joke.rating})
 
 @app.route('/leaderboard', methods=['GET'])
 def get_leaderboard():
     jokes = service.get_leaderboard()
     return jsonify([{"id": joke.id, 
-                     "text": joke.text, 
+                     "setup": joke.setup, "punchline": joke.punchline, 
                      "rating": joke.rating} for joke in jokes])
 
 @app.route('/joke/<int:id>/rate', methods=['POST'])
