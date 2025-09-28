@@ -43,7 +43,24 @@ class JokeRepository:
             cursor.close()
 
     def get_jokes_list(self, sort_order: str = "desc", filter_type: str = "all") -> List[Joke]: # Returns a list of 5!!! Joke objects
-        pass
+        cursor = self.conn.cursor()
+        jokes_list: List[Joke] = []
+        try:
+
+            cursor.callproc('get_jokes_list', (sort_order, filter_type))
+
+            for result_set in cursor.stored_results():
+                results = result_set.fetchmany(5)
+
+                for row in results:
+                    jokes_list.append(Joke(id=row[0], text=row[1], rating=row[2]))
+
+                break
+
+            return jokes_list
+
+        finally:
+            cursor.close()
 
     def update_joke_rating(self, joke_id: int, operating: int) -> bool: # Returns True if update was successful, False otherwise
         pass
