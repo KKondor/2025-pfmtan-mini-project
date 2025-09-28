@@ -232,13 +232,22 @@ Csalk egy entitást tartalmaz: jokes
 
 ### Tárolt eljárások
 
--`get_joke_by_id`: visszaad egy viccet id alapján az adatbázisból.
--`get_jokes_list`: visszaad egy listát az adatbázisból ami rendezve és szürve van.
--`update_joke_rating`: növeli vagy csökkenti az adott vicc értékelését add vagy subtrack művelettel.
+- `get_joke_by_id`: visszaad egy viccet id alapján az adatbázisból.
+- `get_jokes_list`: visszaad egy listát az adatbázisból ami rendezve és szürve van.
+- `update_joke_rating`: növeli vagy csökkenti az adott vicc értékelését add vagy subtrack művelettel.
 
 ### Fizikai adatmodellt legeneráló SQL szkript
 
----
+`CREATE TABLE jokes (
+idx INT PRIMARY KEY AUTO_INCREMENT,
+joke_text TEXT NOT NULL,
+joke_type VARCHAR(50) NOT NULL,
+rating INT DEFAULT 0
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;`
+
+`INSERT INTO jokes (joke_text, joke_type, rating)
+VALUES ('Why do programmers prefer dark mode? Because light attracts bugs.', 'informatics', 0);`
+`...`
 
 ## Implementációs terv
 
