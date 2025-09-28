@@ -2,22 +2,18 @@ from flask import Flask, jsonify, request, render_template
 from services import JokeService
 from repository import JokeRepository
 
-app = Flask(
-    __name__,
-    template_folder="../src/pages",
-    static_folder="../src/pages/"
-)
+app = Flask(__name__)
 
 repo = JokeRepository()
 service = JokeService(repo)
 
 @app.route('/')
 def main_page():
-    return render_template('main-page/main-page.html')
+    return render_template('main-page.html')
 
 @app.route('/leaderboard-page')
 def leaderboard_page():
-    return render_template('leaderboard-page/leaderboard-page.html')
+    return render_template('leaderboard-page.html')
 
 @app.route('/joke', methods=['GET'])
 def get_joke():
