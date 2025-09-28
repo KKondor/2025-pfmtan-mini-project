@@ -10,5 +10,18 @@ document.addEventListener("DOMContentLoaded", async () => {
         // Clear old list
         leaderboardList.innerHTML = "";
 
+        // Add jokes to the leaderboard
+        jokes.forEach(joke => {
+            let setup = joke.text;
+            let punchline = "";
+
+            if (joke.text.includes("|")) {
+                const [s, p] = joke.text.split("|");
+                setup = s.trim();
+                punchline = p ? p.trim() : "";
+            }
+        });
+
+        
     }
   });
