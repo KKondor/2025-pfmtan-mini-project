@@ -61,6 +61,13 @@ def test_leaderboard_page(client):
     response = client.get('/leaderboard-page')
     assert response.status_code == 200
 
-def test_404_page(client):
+def test_bad_route(client):
     response = client.get('/abcd')
     assert response.status_code == 404
+
+def test_random_joke_id_range(client):
+    for i in range(10):
+        response = client.get('/joke')
+        assert response.status_code == 200
+        data = response.get_json()
+        assert 1 <= data['id'] <= 700
