@@ -57,6 +57,6 @@ def test_main_page(client):
     assert response.status_code == 200
 
 # test if leaderboard-page.html loads
-def test_leaderboard_page():
+def test_leaderboard_page(client):
     response = client.get('/leaderboard-page')
     assert response.status_code == 200
