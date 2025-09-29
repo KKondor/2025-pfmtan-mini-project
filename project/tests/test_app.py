@@ -1,5 +1,6 @@
 import pytest
 from project import app
+from unittest.mock import patch, MagicMock
 
 @pytest.fixture
 def client():
@@ -26,3 +27,12 @@ def test_get_leaderboard(client):
         assert 'setup' in joke
         assert 'punchline' in joke
         assert 'rating' in joke
+
+# POST /joke/<id>/rate endpoint test (like)
+@patch('project.services.JokeService.rate_joke')
+def test_rate_joke_like(mock_rate, client):
+    response = client.post('/joke/1/rate', json={'value': 1})
+    assert response.status_code == 200
+    data = response.get_json()
+    assert data['success'] is True
+    mock_rate.assert_called_once_with(1, 1)
