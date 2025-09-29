@@ -45,3 +45,9 @@ def test_rate_joke_dislike(mock_rate, client):
     data = response.get_json()
     assert data['success'] is True
     mock_rate.assert_called_once_with(1, -1)
+
+# POST /joke/<id>/rate endpoint test (invalid value)
+def test_rate_joke_invalid_value(client):
+    response = client.post('/joke/1/rate', json={'value': 0})
+    assert response.status_code == 500
+
