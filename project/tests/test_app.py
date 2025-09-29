@@ -71,3 +71,7 @@ def test_random_joke_id_range(client):
         assert response.status_code == 200
         data = response.get_json()
         assert 1 <= data['id'] <= 700
+
+def test_bad_method(client):
+    response = client.post('/joke')
+    assert response.status_code == 405
