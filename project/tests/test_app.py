@@ -60,3 +60,7 @@ def test_main_page(client):
 def test_leaderboard_page(client):
     response = client.get('/leaderboard-page')
     assert response.status_code == 200
+
+def test_404_page(client):
+    response = client.get('/abcd')
+    assert response.status_code == 404
