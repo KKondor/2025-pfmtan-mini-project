@@ -55,3 +55,8 @@ def test_rate_joke_invalid_value(client):
 def test_main_page(client):
     response = client.get('/')
     assert response.status_code == 200
+
+# test if leaderboard-page.html loads
+def test_leaderboard_page():
+    response = client.get('/leaderboard-page')
+    assert response.status_code == 200
