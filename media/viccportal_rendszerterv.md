@@ -312,10 +312,52 @@ VALUES ('Why do programmers prefer dark mode? Because light attracts bugs.', 'in
 
 ## Tesztterv
 
----
+**Cél:** Biztosítani, hogy a viccportál minden funkciója hibamentesen működjön, a backend és frontend helyesen kommunikál, és a felhasználói élmény megfelelő legyen.  
 
-## Telepítési terv
+### 1. Egységtesztek (Unit Tests)  
+- **Backend függvények tesztelése:**
+  - `get_joke_by_id` tárolt eljárás: visszaadja a megfelelő viccet.
+  - `update_rating`: a vicc értékelését helyesen frissíti.
+- **Adatbázis kapcsolat tesztelése:** a DB elérhető, a táblák léteznek.
+
+### 2. Integrációs tesztek (Integration Tests)  
+- A frontend gomb `Kérj egy viccet` helyesen hívja a backend API-t.
+- A vicc megjelenik a képernyőn a megfelelő formátumban.
+- Értékelés gomb (`Like/Dislike`) helyesen frissíti az adatbázist.
+
+### 3. Rendszertesztek (End-to-End Tests)  
+- Felhasználói történetek ellenőrzése:
+  1. Felhasználó megnyomja a „Kérj egy viccet” gombot → vicc megjelenik.
+  2. Felhasználó értékeli a viccet → a rating frissül az adatbázisban.
+  3. Felhasználó megnyitja a Leaderboard oldalt → a viccek értékelése helyesen látszik.
+
+### 4. Tesztelési eszközök  
+- Backend: `unittest` (Python).  
+- Frontend: manuális tesztelés a böngészőben.  
+- API: Postman vagy cURL a végpontok ellenőrzésére.
 
 ---
 
 ## Karbantartási terv
+
+**Cél:** A rendszer hosszú távú működésének biztosítása, hibák javítása és frissítések kezelése.  
+
+### 1. Hibajavítás  
+- Hibák jelentése GitHub Issues-en.  
+- Rövid hibajavítások készítése új branch-en, tesztelés után merge.
+
+### 2. Adatbázis karbantartás  
+- Mentések készítése: napi vagy heti dump a PostgreSQL adatbázisról.  
+- Törölt vagy sérült rekordok helyreállítása mentésből.
+
+### 3. Függőség frissítés  
+- `requirements.txt` frissítése biztonsági javítások és új könyvtárverziók szerint.  
+- Tesztelés minden frissítés után.
+
+### 4. Új funkciók  
+- Új értékelési lehetőségek, új vicctípusok vagy API-k hozzáadása modulárisan.  
+- Rendszerterv frissítése minden bővítésnél.
+
+### 5. Monitoring  
+- Backend logok figyelése hibákra.  
+- Adatbázis és szerver erőforrások monitorozása.
