@@ -1,9 +1,10 @@
 import pytest
-from project import app
+from project.app import create_app
 from unittest.mock import patch, MagicMock
 
 @pytest.fixture
 def client():
+    app = create_app()
     with app.test_client() as client: # create test client
         yield client
 
